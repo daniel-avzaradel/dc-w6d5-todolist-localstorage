@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+#title {
+    padding: 10px;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+header {
+    position: sticky;
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+nav {
+    width: auto;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 10px 0px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 10px 30px;
+}
+nav ul li a:hover {
+    background-color: #444;
+    color: #f2f2f2;
+}
+
+main {
+    position: absolute;
+    min-width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    color: rgb(250, 186, 114);
+}
+
+.container {
+    width: 600px;
+    height: auto;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+#new-task {
+    color: rgb(44, 47, 58);
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.table {
+    width: 100%;
+    background-color: white;
+    font-weight: 400;
+    padding: 0;
+    border-spacing: 0px;
+}
+
+.table tr td, .table tr th {
+    padding: 8px;
+    margin: 0;
+    text-align: left;
+}
+
+.table tr td {
+    cursor: pointer;
+}
+
+.table tbody tr:first-child {
+    background-color: rgb(228, 144, 48);
+    color: white;
+}
+
+.overlay, .delete-overlay, .edit-overlay {
+    background-color: rgba(0,0,0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.overlay-box, .delete-box, .edit-box {
+    position: absolute;
+    z-index: 3;
+    background-color:white;
+    width: 400px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.8);
+}
+
+.overlay-box h2 {
+    width: 100%;
+    color: #444;
+    margin-top: 10px;
+}
+
+#warning {
+    color:rgb(224, 75, 75);
+    padding: 20px;
+}
+
+.overlay-box h3 {
+    color: #444;
+    margin: 10px;
+}
+.overlay-box p, .delete-box p, .edit-box p {
+    width: 80%;
+    margin: 10px;
+}
+
+#close, #close1, #close2, #confirm, #save {
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s ease-in-out;
+}
+
+#close, #close1, #close2 {
+    background-color: rgb(224, 75, 75);
+}
+
+#confirm, #save {
+    background-color: rgb(75, 152, 224);
+}
+
+.done {
+    background-color: lightseagreen;
+}
+
+.over {
+    background-color: salmon;
+}
+
+.fa-check {
+    margin: 0 10px;
+}
+
+#editForm {
+    display: flex;
+    width: 360px;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+#editForm input {
+    padding: 6px;
+    margin: 4px;
+    width: 100%;
+    background-color: #f2f2f2;
+    border: none;
+    outline: none;
+}
+
+textarea {
+    margin: 10px;
+    width: 100%;
+    padding: 4px;
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+}
+
+.error-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255, 71, 71);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease-out;
+    opacity: 1;
+}
+.error-header i {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+@media screen and (min-width:426px) and (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+    .container {
+        width: 90%;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (min-width:275px) and (max-width: 425px) {
+    main {
+        width: 90%;
+    }
+    .container {
+        width: 90%;
+    }
+}
